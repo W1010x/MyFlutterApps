@@ -15,7 +15,7 @@ const kMessageTextFieldDecoration = InputDecoration(
 const kMessageContainerDecoration = BoxDecoration(
   border: Border(
     top: BorderSide(color:
-        Color(0xffff7e8b)
+        Color(0xff4c7fd9)
       , width: 2.0),
   ),
 );
@@ -28,12 +28,12 @@ const kTextFieldDecoration=InputDecoration(
   ),
   enabledBorder: OutlineInputBorder(
     borderSide:
-    BorderSide(color:  Color(0xffff7e8b), width: 1.0),
+    BorderSide(color:  Color(0xff203c6e), width: 1.0),
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
   focusedBorder: OutlineInputBorder(
     borderSide:
-    BorderSide(color:  Color(0xffff7e88), width: 2.0),
+    BorderSide(color:  Color(0xff203c6e), width: 2.0),
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
 );
