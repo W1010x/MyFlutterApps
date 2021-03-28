@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:user_form/Const/Constants.dart';
 import 'package:user_form/widgets/Cards.dart';
+const BottomContinerHight=80.0;
+const CardColor=Color(0xFFF2F2F2);
+const BottomContainerColor=Color(0xFF5c5c5c);
 class homePage extends StatefulWidget {
 
   @override
@@ -14,20 +17,8 @@ class _homePageState extends State<homePage> {
      appBar: AppBar(
        elevation: 0,
        backgroundColor: Color(0xff28434c) ,
-       title:  Padding(
+       title: Padding(
          padding: const EdgeInsets.only(left: 290.0,bottom: 8),
-         child: Container(
-           decoration: BoxDecoration(
-             color: Color(0xff8a989e),
-             borderRadius: BorderRadius.circular(50),
-           ),
-           child: new IconButton(
-               icon: new Icon(
-                 Icons.list_rounded,
-                 size: 30.0,
-                 color: Colors.white,
-               ),onPressed: null),
-         ),
        ),
      ),
         body: Container(
@@ -44,13 +35,15 @@ class _homePageState extends State<homePage> {
                 ],
               )
           ),
+
           child: Column(
             children: [
               Expanded(child:Row(
                 children: [
-                  Expanded(child: CardsContiner(),
+                  Expanded
+                    (child: CardsContiner(Coluor:Color(0xFFF2F2F2)),
                   ),
-                  Expanded(child: CardsContiner()),
+                  Expanded(child: CardsContiner(Coluor: Color(0xFFF2F2F2))),
                 ],
               )),
               Expanded(child:  CardsContiner()),
@@ -59,12 +52,21 @@ class _homePageState extends State<homePage> {
                   Expanded(child: CardsContiner()),
                   Expanded(child:  CardsContiner()),
                 ],
-              ))
+              ),
+              ),
+              Container(//Bottom Bar
+                color: BottomContainerColor,
+                margin: EdgeInsets.only(top:10.0 ),
+                width: double.infinity,
+                height: BottomContinerHight,
+              )
+
 
               
             ],
           ),
     )
+
     );
   }}
 
