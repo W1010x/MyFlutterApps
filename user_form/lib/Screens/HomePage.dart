@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:user_form/Const/Constants.dart';
+import 'package:user_form/widgets/cardContent.dart';
 import 'package:user_form/widgets/Cards.dart';
 const BottomContinerHight=80.0;
 const CardColor=Color(0xFFF2F2F2);
@@ -17,40 +18,51 @@ class _homePageState extends State<homePage> {
      appBar: AppBar(
        elevation: 0,
        backgroundColor: Color(0xff28434c) ,
-       title: Padding(
-         padding: const EdgeInsets.only(left: 290.0,bottom: 8),
-       ),
+       title: Text('Home Page')
      ),
         body: Container(
-          width: double.infinity,
-          //  height: 300,
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end:
-                Alignment(0.8, 0.0), // 10% of the width, so there are ten blinds.
-                colors: <Color>[
-                  Color(0xff28434c),
-                  Color(0xff8a989e),
-                ],
-              )
-          ),
-
+       color: Colors.blueGrey,
           child: Column(
             children: [
               Expanded(child:Row(
                 children: [
                   Expanded
-                    (child: CardsContiner(Coluor:Color(0xFFF2F2F2)),
+                    (child: CardsContiner(
+                    Coluor:Color(0xFFF2F2F2),
+                    cardChild: contentCard(
+                      bundle: 'assets/io.jpg',
+                      lable: 'Samar',
+                    ),
                   ),
-                  Expanded(child: CardsContiner(Coluor: Color(0xFFF2F2F2))),
+                  ),
+                  Expanded(child: CardsContiner(
+                      Coluor: Color(0xFFF2F2F2),
+                    cardChild: contentCard(
+                      bundle: 'assets/relax.png',
+                      lable: 'Samar',
+                    ),
+                  )),
                 ],
-              )),
-              Expanded(child:  CardsContiner()),
-              Expanded(child: Row(
+              )
+              ),
+              Expanded(
+                  child:CardsContiner(
+                  Coluor:Color(0xFFF2F2F2),
+              )
+              ),
+              Expanded(
+                child: Row(
                 children: [
-                  Expanded(child: CardsContiner()),
-                  Expanded(child:  CardsContiner()),
+                  Expanded(
+                      child:CardsContiner(
+                      Coluor:Color(0xFFF2F2F2),
+                  ),
+                  ),
+                  Expanded(
+                      child:CardsContiner(
+                      Coluor:Color(0xFFF2F2F2),
+                  ),
+                  ),
                 ],
               ),
               ),
@@ -60,13 +72,8 @@ class _homePageState extends State<homePage> {
                 width: double.infinity,
                 height: BottomContinerHight,
               )
-
-
-              
             ],
           ),
     )
-
     );
   }}
-
