@@ -23,12 +23,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  carousel_slider: ^2.3.1
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.0.0
+
 
 
 dev_dependencies:
@@ -40,33 +42,19 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+
   assets:
-    - assets/relax.png
     - assets/diamond.png
-    - assets/io.jpg
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
+    - assets/meeting.png
+    - assets/brain.png
 
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+     - family: El_Messiri
+       fonts:
+         - asset: fonts/ElMessiri-Regular.ttf
+  #      - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

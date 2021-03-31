@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: <Widget>[
 
                 Hero(
-                  tag:'login',
+                  tag:'Login',
                   child: Container(
                     height: 100.0,
                     child: Image.asset('assets/diamond.png',),
@@ -46,13 +46,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Center(
                   child: Text(
-                    '  Log In   ',
-                    style:TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.w500
-                    ),
-                  ),
+                    '    تسجيل الدخول   ',
+                    style:TextStyles,
+                  )
                 ),
                 SizedBox(
                   height: 48.0,
@@ -65,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     email=value;
                   },
                   decoration: kTextFieldDecoration.copyWith(
-                      hintText: "Enter your Email"
+                      hintText: "البريد الالكتروني"
                   ),
                 ),
                 SizedBox(
@@ -79,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       password=value;
                     },
                     decoration: kTextFieldDecoration.copyWith(
-                        hintText: "Enter your Password")
+                        hintText: " كلمه المرور")
                 ),
                 SizedBox(
                   height: 24.0,
@@ -94,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         minWidth:200.0,
                         height: 42.0,
                         child: Text(
-                          'Log In',
+                          'تسجيل الدخول',
                         ),
                         onPressed: () {
                           //Implement login functionality.

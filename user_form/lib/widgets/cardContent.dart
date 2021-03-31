@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import '../Const/Constants.dart';
 
 class contentCard extends StatelessWidget {
-  contentCard({this.lable,this.bundle});
+  contentCard({this.lable,this.bundle,this.height, this.width });
   final String lable;
   final String bundle;
+  final double height;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -11,14 +14,14 @@ class contentCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          child: Image.asset(
-            bundle,
-            height: 100.0,
-            width: 100.0,
+          child:
+          Image.asset( bundle,
+            height: height,
+            width: width,
             fit: BoxFit.cover,
           ),),
         SizedBox(height:10.0),
-        Text(lable)
+        Text(lable,style: TextStyles,)
       ],
     );
   }
