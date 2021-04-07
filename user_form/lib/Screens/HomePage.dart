@@ -67,7 +67,6 @@ class _homePageState extends State<homePage> {
           child: Column(
             children: [
               CarouselSlider(
-
                 options: CarouselOptions(
                   autoPlay: true,
                   height: 200.0,
